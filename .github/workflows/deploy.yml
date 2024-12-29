@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main  # Replace with your branch name if different
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
