@@ -1,0 +1,9 @@
+name: Deploy static page
+on: push
+jobs:
+    deploy:
+          runs-on: ubuntu-latest
+          steps: 
+              - name: "action"
+              run: 
+                  echo "hello janis"
