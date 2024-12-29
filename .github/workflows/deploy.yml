@@ -1,8 +1,22 @@
-name: Deploy static page
-on: push
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Replace with your branch name if different
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: "action"
-        run: echo "hello janis"
+    # Checkout the repository
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    # Set up GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: Github_Pages_Deployment # Specify the directory containing your HTML files
