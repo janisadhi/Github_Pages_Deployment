@@ -5,5 +5,5 @@ jobs:
           runs-on: ubuntu-latest
           steps: 
               - name: "action"
-              run: 
-                  echo "hello janis"
+                run: 
+                    echo "hello janis"
